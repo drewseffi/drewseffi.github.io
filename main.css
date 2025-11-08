@@ -1,0 +1,60 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(to top, #000000, #1a151f);
+  font-family: Consolas, "Courier New", monospace;
+  color: #fff;
+  line-height: 1.6;
+}
+
+.container {
+  display: flex;
+  height: 100vh; /* full viewport height */
+}
+
+.content-paragraph {
+    padding-left: 2rem;
+    padding-bottom: 2rem;
+}
+
+.sidebar {
+    width: 400px;
+    padding: 2rem;
+}
+
+.main-content {
+  width: 100%;
+  padding: 2rem;
+  overflow-y: auto;
+  /* border-left: 2px solid #ccc; */
+}
+
+h1, h2, h3 {
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+    color: #67b1f7;
+}
+
+p {
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
+
+img {
+    border-radius: 8px;
+    display: block;
+    margin: auto;
+    width: 768px;
+    height: 432px;
+}
