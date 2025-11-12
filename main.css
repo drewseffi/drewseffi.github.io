@@ -87,6 +87,11 @@ p {
   padding: 2px 10px 2px 10px;
   justify-content: center;
   align-items: center;
+  transition: transform .2s;
+}
+
+.stack-item:hover {
+  transform: scale(1.1);
 }
 
 .stack {
@@ -104,22 +109,20 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: flex-start;
   flex-grow: 1;
   min-height: 0;
   gap: 15px;
 }
 
-/* width */
 ::-webkit-scrollbar {
   width: 7px;
 }
 
-/* Track */
 ::-webkit-scrollbar-track {
   background-color: #11ffee00;
 }
 
-/* Handle */
 ::-webkit-scrollbar-thumb {
   background: white;
   border-radius: 10px;
@@ -127,4 +130,13 @@ p {
 
 .copyright-text {
   font-size: 4;
+}
+
+.animated-title {
+  transition: transform .4s;
+  width: auto;
+}
+
+.animated-title:hover {
+  transform: scale(1.2);
 }
