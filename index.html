@@ -10,29 +10,37 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <nav class="head">
-            <div class="intro">
-                <h1>Drew Sutherland</h1>
-                <h3>22 | Kirkcaldy, Scotland</h3>
-                <p>Computer Science graduate (BSc Hons) with an additional HNC in Sound Production.</p>
+    <nav class="head">
+        <div class="navigation-panel">
+            <h3 class="animated-title" onclick="showSection('landing')">Home</h3>
+            <h3 class="animated-title" onclick="showSection('education')">Education</h3>
+            <h3 class="animated-title" onclick="showSection('projects')">Projects</h3>
+            <h3 class="animated-title">About</h3>
+            <h3 class="animated-title">Contact</h3>
+        </div>
+    </nav>
 
-                <div class="intro-thumbnails">
-                    <a href="https://github.com/drewseffi" target="_blank"><img src="src/github.png"class="small-image"></a>
-                    <a href="https://www.linkedin.com/in/drew-sutherland-9a5872323/" target="_blank"><img src="src/linkedin.png"class="small-image"></a>
-                    <a href="https://www.youtube.com/@drew_sutherland" target="_blank"><img src="src/youtube.png"class="small-image"></a>
+    <div class="container">
+        <section id="landing" class="page-section">
+            <div style="display: flex; justify-content: center; align-items: center; height: 100%;">
+                <div class="intro">
+                    <div class="flexable">
+                        <h1>Drew Sutherland</h1>
+                        <h3>22 | Kirkcaldy, Scotland</h3>
+                        <p>Computer Science graduate (BSc Hons) with an additional HNC in Sound Production.</p>
+
+                        <div class="intro-thumbnails">
+                            <a href="https://github.com/drewseffi" target="_blank"><img src="src/github.png"class="small-image"></a>
+                            <a href="https://www.linkedin.com/in/drew-sutherland-9a5872323/" target="_blank"><img src="src/linkedin.png"class="small-image"></a>
+                            <a href="https://www.youtube.com/@drew_sutherland" target="_blank"><img src="src/youtube.png"class="small-image"></a>
+                        </div>
+                    </div>
+                    <img src="src/profile.png" style="height: 100%; border-radius: 50%; border: 2px rgba(255, 255, 255, 0.3) solid">
                 </div>
             </div>
+        </section>
 
-            <div class="navigation-panel">
-                <h3 class="animated-title" onclick="scrollToSection('education')">Education</h3>
-                <h3 class="animated-title" onclick="scrollToSection('projects')">Projects</h3>
-                <h3 class="animated-title">About</h3>
-                <h3 class="animated-title">Contact</h3>
-            </div>
-        </nav>
-
-        <section id="Education">
+        <section id="education" class="page-section">
             <div class="glass">
                 <h1 class="title">Education</h1>
             </div>
@@ -73,7 +81,7 @@
             </div>
         </section>
         
-        <section id="projects">
+        <section id="projects" class="page-section">
             <div class="glass">
                 <h1 class="title">Projects</h1>
             </div>
@@ -177,7 +185,7 @@
 
                 <div class="content-paragraph">
                     <div class="content-title">
-                        <h2>Parley - Fife College Game Jam</h2>
+                        <h2>Parley | Fife College Game Jam</h2>
                         <h2>January 2025</h2>  
                     </div>
                     
@@ -240,8 +248,11 @@
                 </div>
             </div>
         </section>
-        
     </div>
+
+    <footer class="footer">
+        <p style="margin: 0;">© 2025 Drew Sutherland. All rights reserved.</p>
+    </footer>
 
     <script src="app.js"></script>
 </body>
