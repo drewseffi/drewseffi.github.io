@@ -28,3 +28,10 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
 } 
 // End reference
+
+function scrollToSection(id)
+{
+  document.getElementById(id).scrollIntoView({
+    behavior: "smooth"
+  });
+}
