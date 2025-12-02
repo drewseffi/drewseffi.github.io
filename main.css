@@ -50,7 +50,7 @@ body {
 .content-paragraph {
   padding: 2rem;
   box-sizing: border-box;
-  width: 75%;
+  width: 65%;
   background-color: rgba(0, 0, 0, 0.568);
   border-radius: 15px;
   border: 2px solid rgba(255, 255, 255, 0.3);
@@ -104,8 +104,6 @@ footer {
 .main-content {
   width: 100%;
   box-sizing: border-box;
-  padding-left: 100px;
-  padding-right: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -134,8 +132,27 @@ h1 {
 }
 
 .title {
-  color: black;
+  color: white;
   font-size: 64px;
+  font-family: Mona Sans Variable, Arial, sans-serif;
+  font-weight: 600;
+}
+
+.shimmer {
+  background: linear-gradient(90deg, #ffffff, #daaafd, #ffffff);
+  background-clip: text;
+  color: transparent;
+  background-size: 200% 100%;
+  animation: shimmer 5s linear infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
 }
 
 a {
@@ -236,23 +253,32 @@ p {
 }
 
 .glass {
-    background: rgba(255, 255, 255, 0.39);
-    border-radius: 20px;
-    padding: 40px 60px;
+    background-color: rgba(0, 0, 0, 0.568);
+    border-radius: 15px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(10px);
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
     text-align: center;
-    max-width: 600px;
-    max-height: 150px;
+    width: 65%;
+    height: 120px;
     margin: auto;
     border: 2px solid rgba(255, 255, 255, 0.3);
     box-sizing: border-box;
     display: flex;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: flex-start;
     align-items: center;
     margin-top: 25px;
     margin-bottom: 25px;
     animation: fade 0.5s ease;
+    padding-left: 2rem;
+}
+
+hr {
+  border: none;
+  border-top: 4px dashed white;
+  height: 1px;
+  flex: 1;
 }
 
 .slideshow {
