@@ -1,11 +1,12 @@
 html, body {
   height: 100%;
+  width: 100%;
   margin: 0;
   padding: 0;
 }
 
 body {
-  background: linear-gradient(to top, #000000, #1a151f);
+  background-color: black;
   font-family: Consolas, "Courier New", monospace;
   color: #fff;
   line-height: 1.6;
@@ -13,27 +14,49 @@ body {
 
 .container {
   display: flex;
+  flex-direction: column;
   height: 100vh;
+  width: 100%;
   justify-content: flex-start;
 }
 
 .content-paragraph {
-    padding-left: 2rem;
-    padding-bottom: 2rem;
-    width: 75%;
+  padding: 2rem;
+  box-sizing: border-box;
+  width: 75%;
+  background-color: rgba(0, 0, 0, 0.568);
+  border-radius: 15px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
 }
 
-.sidebar {
-    width: 400px;
+.head {
+    width: 100%;
     padding: 2rem;
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    box-sizing: border-box;
+}
+
+.intro {
+  width: 400px;
+  background-color: rgba(0, 0, 0, 0.568);
+  border-radius: 15px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  padding: 20px;
 }
 
 .main-content {
   width: 100%;
-  padding: 2rem;
-  overflow-y: auto;
+  box-sizing: border-box;
+  padding-left: 100px;
+  padding-right: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 20px;
 
   /* border-left: 2px solid #ccc; */
 }
@@ -45,6 +68,11 @@ h1, h2, h3 {
 
 h1 {
     font-family: Arial, Helvetica, sans-serif;
+}
+
+.title {
+  color: black;
+  font-size: 64px;
 }
 
 a {
@@ -107,12 +135,7 @@ p {
 
 .navigation-panel {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  flex-grow: 1;
-  min-height: 0;
-  gap: 15px;
+  gap: 25px;
 }
 
 ::-webkit-scrollbar {
@@ -128,10 +151,6 @@ p {
   border-radius: 10px;
 }
 
-.copyright-text {
-  font-size: 4;
-}
-
 .animated-title {
   transition: transform .4s;
   width: auto;
@@ -139,4 +158,33 @@ p {
 
 .animated-title:hover {
   transform: scale(1.2);
+}
+
+.parallax {
+  background-image: url('src/background.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.glass {
+    background: rgba(255, 255, 255, 0.39);
+    border-radius: 20px;
+    padding: 40px 60px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    color: white;
+    text-align: center;
+    max-width: 600px;
+    max-height: 150px;
+    margin: auto;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
