@@ -240,12 +240,22 @@ p {
 
 .animated-title {
   transition: transform .4s;
+  text-shadow: 0 37px #daaafd;
   width: auto;
+  overflow: hidden;
+  cursor: pointer;
+  span {
+    position: relative;
+    display: inline-block;
+    transition: translate 0.2s ease;
+}
 }
 
 .animated-title:hover {
-  transform: scale(1.2);
-  cursor: pointer;
+  span {
+    translate: 0 -100%;
+    animation-delay: calc();
+  }
 }
 
 .parallax {

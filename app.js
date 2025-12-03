@@ -47,3 +47,11 @@ function showSection(id)
     showSlides(slideIndex);
   }
 }
+
+document.querySelectorAll('.animated-title').forEach(title => {
+  const letters = title.querySelectorAll('span');
+
+  letters.forEach((span, i) => {
+    span.style.transitionDelay = `${i * 0.01}s`;
+  });
+});
