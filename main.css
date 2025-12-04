@@ -51,7 +51,7 @@ body {
   padding: 2rem;
   box-sizing: border-box;
   width: 65%;
-  background-color: rgba(0, 0, 0, 0.568);
+  background-color: rgba(0, 0, 0, 0.75);
   border-radius: 15px;
   border: 2px solid rgba(255, 255, 255, 0.3);
   backdrop-filter: blur(10px);
@@ -65,7 +65,7 @@ body {
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
-    background-color: rgba(0, 0, 0, 0.568);
+    background-color: rgba(0, 0, 0, 0.75);
     backdrop-filter: blur(10px);
 }
 
@@ -87,7 +87,7 @@ footer {
 }
 
 .intro {
-  background-color: rgba(0, 0, 0, 0.568);
+  background-color: rgba(0, 0, 0, 0.75);
   border-radius: 15px;
   border: 2px solid rgba(255, 255, 255, 0.3);
   backdrop-filter: blur(10px);
@@ -190,10 +190,12 @@ p {
   display: flex;
   flex-wrap: wrap;
   flex-flow: row;
-  justify-content: left;
+  justify-content: space;
+  margin-top: 12px;
+  gap: 14px;
 }
 
-.stack-item {
+.link-item {
   display: flex;
   border: 2px solid white;
   border-radius: 12px;
@@ -204,25 +206,40 @@ p {
   transition: transform .2s, background-color .2s;
 }
 
-.stack-item:hover {
+.link-item:hover {
   transform: scale(1.1);
   background-color: #daaafd;
 }
 
-.stack {
+.links {
   display: flex;
   justify-content: flex-start;
   column-gap: 10px; 
+  margin-top: 22px;
+}
+
+.stack-item {
+  display: flex;
+  flex-direction: row;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 18px;
+  align-items: center;
+  font-family: "JetBrains Mono", monospace;
+}
+
+.stack-item img {
+  opacity: 50%;
 }
 
 .content-title {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .navigation-panel {
   display: flex;
-  gap: 25px;
+  gap: 50px;
 }
 
 ::-webkit-scrollbar {
@@ -270,7 +287,7 @@ p {
 }
 
 .glass {
-    background-color: rgba(0, 0, 0, 0.568);
+    background-color: rgba(0, 0, 0, 0.75);
     border-radius: 15px;
     border: 2px solid rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(10px);
@@ -381,7 +398,7 @@ form {
 
 .form-message {
   resize: none;
-  height: 400px;
+  height: 250px;
   border-radius: 12px;
   padding-top: 6px;
   padding-bottom: 6px;
@@ -404,4 +421,10 @@ form {
   background-color: #daaadf50;
   color: #daaadf;
   border: 2px solid #daaadf;
+}
+
+.dates {
+  color: rgba(255, 255, 255, 0.5);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 1em;
 }
